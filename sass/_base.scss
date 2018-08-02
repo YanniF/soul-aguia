@@ -1,0 +1,56 @@
+$cor-principal: #1aa1d7;
+$cor-clara: #e7e7e7;
+$cor-media: #e2e1e1;
+$cor-escura: #414141;
+
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;    
+  }
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  min-height: 100vh;
+  color: $cor-escura;
+  background-color: $cor-principal;
+
+  h1, 
+  h2 {
+    font-weight: 300;
+  }
+}
+
+::selection {
+  background-color: $cor-principal;
+  color: $cor-clara;
+}
+
+.inner-shadow {  
+  color: $cor-clara;
+  background-color: $cor-principal;
+  box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.35) inset; 
+}
