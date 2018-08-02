@@ -91,12 +91,15 @@ main {
         content: "\00235F";
         color: $cor-principal;
         padding-right: .8rem;
+        animation: muda-cor-texto 15s infinite alternate;  
       }
     }
   }
 
   .data {
     border-right: 1px solid $cor-principal;
+    animation: muda-cor-borda 15s infinite alternate;  
+
   }
 
   .local {    

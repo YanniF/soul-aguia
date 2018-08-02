@@ -38,6 +38,7 @@ body {
   min-height: 100vh;
   color: $cor-escura;
   background-color: $cor-principal;
+  animation: muda-cor-fundo 15s infinite alternate;
 }
 
 h1, 
@@ -55,6 +56,8 @@ h3 {
   color: $cor-clara;
   background-color: $cor-principal;
   box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.35) inset; 
+  animation: muda-cor-fundo 15s infinite alternate;
+
 }
 
 svg {
@@ -62,4 +65,41 @@ svg {
   width: 3rem;
   height: 3rem;
   margin-right: .5rem;
+  animation: muda-cor-svg 15s infinite alternate;  
+}
+
+@keyframes muda-cor-fundo {
+  25% {
+    background-color: $cor-principal;
+  }
+  100% {
+    background-color: $cor-secondaria;
+  }
+}
+
+@keyframes muda-cor-svg {
+  25% {
+    fill: $cor-principal;
+  }
+  100% {
+    fill: $cor-secondaria;
+  }
+}
+
+@keyframes muda-cor-texto {
+  25% {
+    color: $cor-principal;
+  }
+  100% {
+    color: $cor-secondaria;
+  }
+}
+
+@keyframes muda-cor-borda {
+  25% {
+    border-color: $cor-principal;
+  }
+  100% {
+    border-color: $cor-secondaria;
+  }
 }
