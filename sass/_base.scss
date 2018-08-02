@@ -1,4 +1,5 @@
 $cor-principal: #1aa1d7;
+$cor-secondaria: #1ad750;
 $cor-clara: #e7e7e7;
 $cor-media: #e2e1e1;
 $cor-escura: #414141;
@@ -37,11 +38,12 @@ body {
   min-height: 100vh;
   color: $cor-escura;
   background-color: $cor-principal;
+}
 
-  h1, 
-  h2 {
-    font-weight: 300;
-  }
+h1, 
+h2, 
+h3 {
+  font-weight: 300;
 }
 
 ::selection {
@@ -53,4 +55,11 @@ body {
   color: $cor-clara;
   background-color: $cor-principal;
   box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.35) inset; 
+}
+
+svg {
+  fill: $cor-principal;
+  width: 3rem;
+  height: 3rem;
+  margin-right: .5rem;
 }

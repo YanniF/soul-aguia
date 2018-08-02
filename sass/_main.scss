@@ -28,12 +28,142 @@ main {
     width: 40%;
     text-align: center;
     font-size: 4rem;
-  }  
+  }
 }
 
-.title {
-  margin: 4rem 0;
-  font-size: 4.6rem;
-  font-weight: 500;
-  text-decoration: underline;
+.apresentacao {  
+  p {  
+    margin: 6rem 0;
+  }
+
+  p.apresentacao-titulo {
+    margin-top: 4rem;
+    font-size: 4.6rem;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  &-texto {
+    font-size: 3rem;
+  
+    strong {
+      font-weight: 500;
+    }
+  
+    span {
+      display: block;
+      font-size: 2.4rem;
+    }
+  
+    & + p {
+      font-size: 3.6rem;
+    }
+  
+    & + p + p {
+      font-size: 3.6rem;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+  }
+}
+
+.colunas {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 3.4rem;
+  text-align: left;
+
+  p {
+    display: flex;
+    align-items: center;
+  }
+
+  .data,
+  .local {
+    width: 45%;  
+    padding-left: 2rem;
+
+    ul {
+      list-style: none;
+      font-size: 3.2rem;
+
+      li::before {
+        content: "\00235F";
+        color: $cor-principal;
+        padding-right: .8rem;
+      }
+    }
+  }
+
+  .data {
+    border-right: 1px solid $cor-principal;
+  }
+
+  .local {    
+    span {
+      display: block;
+      padding-left: 3.6rem;
+    }
+  }
+}
+
+.incricoes {
+  font-size: 3.6rem;
+  margin: 6rem;
+
+  h3 {
+    margin-bottom: 3rem;
+    font-weight: 500;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inner-shadow {
+    width: 85%;
+    margin: 6rem auto;
+  }
+}
+
+footer {
+  padding: 0 3rem 3rem;
+  text-align: center;
+
+  p:first-child {
+    font-size: 3.6rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  .dev {
+    font-size: 1.6rem;
+
+    a:link,
+    a:visited,
+    a:active {      
+      color: currentColor;
+    }
+
+    a {
+      position: relative;
+      text-decoration: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px solid currentColor;
+        transition: width .2s linear;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
 }
