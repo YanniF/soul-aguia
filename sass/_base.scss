@@ -1,15 +1,13 @@
 $cor-principal: #1aa1d7;
-$cor-secondaria: #1ad750;
+$cor-secondaria: #37d163;
 $cor-clara: #e7e7e7;
 $cor-media: #e2e1e1;
 $cor-escura: #414141;
 
-$bp-largest: 75em;     // 1200px
 $bp-large: 68.75em;    // 1100px
-$bp-medium: 56.25em;   // 900px
-$bp-small: 37.5em;     // 600px
+$bp-medium: 59.38em;   // 950px
+$bp-small: 53.12em;     // 850px
 $bp-smallest: 31.25em; // 500px
-
 
 * {
   margin: 0;
@@ -29,6 +27,10 @@ html {
   @media only screen and (max-width: $bp-large) {
     font-size: 50%;    
   }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 40%;    
+  }
 }
 
 body {
@@ -38,7 +40,7 @@ body {
   min-height: 100vh;
   color: $cor-escura;
   background-color: $cor-principal;
-  animation: muda-cor-fundo 15s infinite alternate;
+  animation: muda-cor-fundo 25s infinite alternate;
 }
 
 h1, 
@@ -56,8 +58,7 @@ h3 {
   color: $cor-clara;
   background-color: $cor-principal;
   box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.35) inset; 
-  animation: muda-cor-fundo 15s infinite alternate;
-
+  animation: muda-cor-fundo 25s infinite alternate;
 }
 
 svg {
@@ -65,11 +66,11 @@ svg {
   width: 3rem;
   height: 3rem;
   margin-right: .5rem;
-  animation: muda-cor-svg 15s infinite alternate;  
+  animation: muda-cor-svg 25s infinite alternate;  
 }
 
 @keyframes muda-cor-fundo {
-  25% {
+  0% {
     background-color: $cor-principal;
   }
   100% {
@@ -78,7 +79,7 @@ svg {
 }
 
 @keyframes muda-cor-svg {
-  25% {
+  0% {
     fill: $cor-principal;
   }
   100% {
@@ -87,7 +88,7 @@ svg {
 }
 
 @keyframes muda-cor-texto {
-  25% {
+  0% {
     color: $cor-principal;
   }
   100% {
@@ -96,7 +97,7 @@ svg {
 }
 
 @keyframes muda-cor-borda {
-  25% {
+  0% {
     border-color: $cor-principal;
   }
   100% {
