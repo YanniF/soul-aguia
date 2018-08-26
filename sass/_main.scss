@@ -144,9 +144,9 @@ main {
       border-bottom: 1px solid $cor-principal;
     }
   }
-
+  .data, // temporário
   .local {    
-    span {
+    li span {
       display: block;
       padding-left: 3.6rem;
     }
